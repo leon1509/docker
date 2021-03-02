@@ -1,0 +1,11 @@
+services:
+  oracle:
+    container_name: oracle11g
+    image: jaspeen/oracle-11g
+    restart: always
+    ports:
+      - "8088:8080"
+      - "1521:1521"
+    volumes:
+      - /d/Downloads/oracle-setup:/install
+      - /f/oracle/data:/u01/app/oracle
